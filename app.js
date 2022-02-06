@@ -25,28 +25,34 @@ if (gender == 'male'){
 var relationshipStatus = prompt("Are you single? ,answer with(yes/no)");
 if(relationshipStatus == "yes"){
     var userRelationshiop = "the user is single";
-} else {
+} else if(relationshipStatus == "no"){
     var userRelationshiop = "the user is not single";
+} else {
+    alert("invalid");
 }
 console.log(relationshipStatus);
 
-let Question1 = confirm("have you used mytodo before?") ;
-if(Question1){
+let Question1 = promt("have you used mytodo before?") ;
+if(Question1 == "yes"){
     var user = "the user has used mytodo before";
     alert("thats amazing!");
-} else{
+} else if (Question1 == "no"){
     var user = "the user has not used mytodo before";
     alert("you will enjoy it");
+}else{
+    alert("invalid")
 }
 
-var websiteRate = confirm("Do you want to rate the website?");
-if(websiteRate){
+var websiteRate = promt("Do you want to rate the website?");
+if(websiteRate == "yes"){
     var userRate = "the user wants to rate";
-} else{
+} else if(websiteRate == "no"){
     var userRate = "the user doesn't want to rate"
+}else{
+    alert("invalid")
 }
 
-let arr = [name, gender, age, userRelationshiop, user, userRate];
-console.log(arr);
-console.log(user);
-console.log(userRate);
+let arr = [userRelationshiop, user, userRate];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
